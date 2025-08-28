@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "5491123456789"; // reemplazar con tu WhatsApp real
+    const phoneNumber = "5491139005157";
     const text = `Hola, soy ${formData.name}. ${formData.message} (Email: ${formData.email})`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
