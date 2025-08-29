@@ -67,7 +67,7 @@ export default function Contact({ selectedPlan }) {
                 rows={4}
                 placeholder="Escribí tu mensaje..."
                 name="message"
-                value={formData.message}
+                value={formData.message || ""}
                 onChange={handleChange}
                 required
               />
