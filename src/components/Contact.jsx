@@ -3,7 +3,7 @@ import { Container, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", message: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,7 +12,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const phoneNumber = "5491139005157";
-    const text = `Hola, soy ${formData.name}. ${formData.message} (Email: ${formData.email})`;
+    const text = `Hola, soy ${formData.name}. ${formData.message}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
@@ -28,7 +28,7 @@ export default function Contact() {
         >
           <h2 className="text-center mb-4">Contacto</h2>
           <p className="text-center text-muted mb-5">
-            ¿Querés trabajar conmigo? Enviame un mensaje por el formulario o directamente por WhatsApp.
+            ¿Querés trabajar conmigo? Llena el formulario para enviar tu mensaje directo por WhatsApp.
           </p>
         </motion.div>
 
@@ -46,18 +46,6 @@ export default function Contact() {
                 placeholder="Tu nombre"
                 name="name"
                 value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Tu email"
-                name="email"
-                value={formData.email}
                 onChange={handleChange}
                 required
               />
