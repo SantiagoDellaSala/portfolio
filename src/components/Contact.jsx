@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Contact({ selectedPlan }) {
   const [formData, setFormData] = useState({ name: "", message: "" });
+
+  useEffect(() => {
+    if (selectedPlan) {
+      setFormData((prev) => ({
+        ...prev,
+        message: `Quiero contratar el plan ${selectedPlan}.`
+      }));
+    }
+  }, [selectedPlan]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

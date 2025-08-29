@@ -37,7 +37,7 @@ const SERVICES = [
   }
 ];
 
-export default function Services() {
+export default function Services({ onSelectPlan }) {
   return (
     <section id="servicios" className="services-section section">
       <Container>
@@ -65,22 +65,22 @@ export default function Services() {
               >
                 <Card className="service-card h-100">
                   <Card.Body className="d-flex flex-column">
-                    <div className="d-flex justify-content-between align-items-start mb-2">
-                      <div>
-                        <Card.Title className="mb-0">{s.title}</Card.Title>
-                        <Card.Subtitle className="small">{s.tag}</Card.Subtitle>
-                      </div>
-                      <div className="price">{s.price}</div>
-                    </div>
-
-                    <ul className="mt-3 mb-4">
+                    <Card.Title>{s.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{s.tag}</Card.Subtitle>
+                    <Card.Text className="fw-bold mb-3">{s.price}</Card.Text>
+                    <ul>
                       {s.bullets.map((b, idx) => (
-                        <li key={idx} className="small">{b}</li>
+                        <li key={idx}>{b}</li>
                       ))}
                     </ul>
 
                     <div className="mt-auto">
-                      <Button href="#contacto" className="btn-primary-custom w-100" aria-label={`Contratar ${s.title}`}>
+                      <Button
+                        href="#contacto"
+                        className="btn-primary-custom w-100"
+                        aria-label={`Contratar ${s.title}`}
+                        onClick={() => onSelectPlan(s.title)}
+                      >
                         Contratar
                       </Button>
                     </div>
