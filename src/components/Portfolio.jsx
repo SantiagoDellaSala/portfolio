@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const PROJECTS = [
   {
     id: 1,
-    title: "Proyecto 1",
+    title: "Plan Básico",
     shortDesc: "Landing page moderna con React y Bootstrap.",
-    longDesc: "Este proyecto es un ejemplo de landing page con diseño responsivo, animaciones y buenas prácticas de React.",
+    longDesc: "Link: https://basic-web-phi.vercel.app/",
     img: "/landing-page.png",
     link: "#"
   },
@@ -35,7 +35,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="portfolio-section py-5">
       <Container>
-        <h2 className="text-center mb-5">Portfolio</h2>
+        <h2 className="text-center mb-5">Proyectos</h2>
         <Row className="g-4">
           {PROJECTS.map((p, i) => (
             <Col key={p.id} md={4}>

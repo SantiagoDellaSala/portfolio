@@ -10,7 +10,7 @@ function MainNavbar() {
           <Nav className="ms-auto">
             <Nav.Link href="#inicio">Inicio</Nav.Link>
             <Nav.Link href="#servicios">Servicios</Nav.Link>
-            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="#portfolio">Proyectos</Nav.Link>
             <Nav.Link href="#contacto">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
