@@ -9,7 +9,7 @@ const PROJECTS = [
     shortDesc: "Landing page moderna con React y Bootstrap.",
     longDesc: "Este proyecto es un ejemplo de landing page con diseño responsivo, animaciones y buenas prácticas de React.",
     img: "/landing-page.png",
-    link: "#"
+    link: "https://basic-web-phi.vercel.app/"
   },
   {
     id: 2,
