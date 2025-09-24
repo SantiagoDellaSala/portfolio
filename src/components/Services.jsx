@@ -8,8 +8,9 @@ const SERVICES = [
     price: "USD 80",
     tag: "Landing simple",
     bullets: [
-      "1 sección (Presentación + Contacto)",
+      "3 secciones (Presentación, Producto y Contacto)",
       "Responsive (móvil + desktop)",
+      "Formulario de contacto conectado",
       "Deploy en Netlify/Vercel"
     ]
   },
@@ -20,7 +21,6 @@ const SERVICES = [
     tag: "Web institucional",
     bullets: [
       "Hasta 3 secciones (Inicio / Servicios / Contacto)",
-      "Formulario de contacto conectado",
       "Optimización básica mobile"
     ]
   },
